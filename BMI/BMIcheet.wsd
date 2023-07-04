@@ -1,0 +1,14 @@
+@startuml
+class BMvoidI{
+    -height String
+    -weight String
+    +set_height(height) void
+    +set_weight(weight) void
+    +set_bmi(bmi) void
+    +get_height(height) String
+    +get_weight(weight) String
+    +get_bmi(bmi) String
+    +calculateBMI() intger
+    +isNormalWeight() intger
+}
+@enduml

@@ -42,19 +42,20 @@ class BMI
             return false;
         }
     }
-    // public function BodyMassIndexBMI()
-    // {
-    //     $bmi= $this-> bmi();
-    //     if ($bmi <= 18.5){
-    //         return "ผอมมากนาาา";
-    //     }elseif($bmi >= 18.6 && $bmi <= 24.0){
-    //         return "น้ำหนักปกติ";
-    //     }elseif($bmi >= 25.0 && $bmi <= 29.9){
-    //         return "อ้วน";
-    //     }else{
-    //         return "อ้วนมาก";
-    //     }
-    // }
+}
+
+// ฟังก์ชั่นสำหรับตรวจสอบค่าร่างกาย
+function checkBodyStatus($bmi)
+{
+    if ($bmi < 18.5) {
+        return "ผอม";
+    } elseif ($bmi >= 18.5 && $bmi < 25) {
+        return "ปกติ";
+    } elseif ($bmi >= 25 && $bmi < 30) {
+        return "ท้วม";
+    } else {
+        return "อ้วน";
+    }
 }
 
 if (
@@ -70,6 +71,7 @@ if (
     $calculator->set_height($height);
     $bmi = $calculator->calculateBMI();
     $isNormalWeight = $calculator->isNormalWeight();
+    $bodyStatus = checkBodyStatus($bmi);
 
     // แสดงผลลัพธ์
     // echo "<p>Your weight: {$weight} kg</p>";
@@ -103,9 +105,11 @@ if (
         if (isset($bmi)) {
             echo "<p>Your weight: {$weight} kg</p>";
             echo "<p>Your height: {$height} cm</p>";
-            echo "<p>Your BMI: {$bmi}</p>";
+            echo "BMI ของคุณคือ: " . number_format($bmi, 2);
+            echo "<p>ค่าร่างกาย : $bodyStatus </p>";
+            // echo "<p>Your BMI: {$bmi}</p>";
 
-            echo $isNormalWeight ? 'น้ำหนักของคุณอยู่ในเกณฑ์ปกติ' : 'น้ำหนักของคุณไม่อยู่ในเกณฑ์ปกติ';
+            echo $isNormalWeight ? 'น้ำหนักของคุณอยู่ในเกณฑ์ปกติ' : '<p>น้ำหนักของคุณไม่อยู่ในเกณฑ์ปกติ</p>';
 
             // echo "<p>Your isNormalWeight: {$isNormalWeight} น้ำหนักของคุณอยู่ในเกณฑ์ปกติ : น้ำหนักของคุณไม่อยู่ในเกณฑ์ปกติ";
         }

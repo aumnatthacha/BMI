@@ -8,13 +8,13 @@ body {
 h1 {
     text-align: center;
     color: #333;
-    font-size: 6em;
+    font-size: 2em;
 }
 
 form {
     max-width: 300px;
     margin: 20px auto;
-    background-color: #f1e771;
+    background-color: #eceada;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -37,7 +37,7 @@ button[type="submit"] {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
+    background-color: #070707;
     color: #fff;
     font-family: Arial, sans-serif; border: none;
     font-size: larger;
@@ -46,6 +46,6 @@ button[type="submit"] {
     margin: 10px;
 }
 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: larger;
 }

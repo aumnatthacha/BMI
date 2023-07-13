@@ -1,6 +1,3 @@
-<?php
-require_once 'checkBody.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +16,7 @@ require_once 'checkBody.php';
 <body>
 
     <h1>BMI Calculator</h1>
-    <form method="POST" action="">
+    <form method="POST" action="/">
         <label for="weight">Weight (kg):</label>
         <input type="text" name="weight" id="weight" required>
 
@@ -28,13 +25,22 @@ require_once 'checkBody.php';
 
         <button type="submit"><b>Calculate BMI</button>
         <?php
-        if (isset($bmi)) {
-            echo "<p><b>Your weight : {$weight} kg</p>";
-            echo "<p><b>Your height : {$height} cm</p>";
-            echo "<p><b>BMI ของคุณคือ : " . number_format($bmi, 2);
-            echo "<p><b>ค่าร่างกาย : $bodyStatus </p>";
+        include_once "./HealthAnalyzer.php";
+        include_once "./Bmilndexer.php";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $weight = $_POST["weight"];
+            $height = $_POST["height"];
+            $healthAnalyzer = new HealthAnalyzer();
+            $bmilndexer = new Bmilndexer();
+            // $roundedBMI = number_format($bmi, 2);
+            echo "<p class='text'> BMI =" . $healthAnalyzer->Analyzer($height, $weight) . "</p>";
+            echo "<p class='text'> รูปร่าง =" . number_format($bmilndexer->calbmi($height, $weight), 2) . "</p>";
 
-            // echo $isNormalWeight ? 'น้ำหนักของคุณอยู่ในเกณฑ์ปกติ' : 'น้ำหนักของคุณไม่อยู่ในเกณฑ์ปกติ';
+            // $healthAnalyzer = new HealthAnalyzer();
+            // $bmilndexer = new Bmilndexer();
+            // $healthAnalyzer->Analyzer(4,5);
+            // echo $bmilndexer->calbmi(165,45);
+
         }
         ?>
 

@@ -5,6 +5,13 @@ class BMI
     private $weight;
     private $bmi;
 
+    public function __construct($height,$weight)
+    {
+        $this->height = $height/100;
+        $this->weight = $weight;
+        $this->bmi = $weight / (($height/100)*($height/100));
+    }
+
     public function set_height($height)
     {
         $this->height = $height;

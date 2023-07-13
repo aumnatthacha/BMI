@@ -48,6 +48,7 @@ button[type="submit"] {
 }
 
 p {
+    color: #070707;
     text-align: center;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: larger;

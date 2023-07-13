@@ -17,6 +17,7 @@ require_once 'checkBody.php';
 </head>
 
 <body>
+
     <h1>BMI Calculator</h1>
     <form method="POST" action="">
         <label for="weight">Weight (kg):</label>
@@ -36,6 +37,7 @@ require_once 'checkBody.php';
             // echo $isNormalWeight ? 'น้ำหนักของคุณอยู่ในเกณฑ์ปกติ' : 'น้ำหนักของคุณไม่อยู่ในเกณฑ์ปกติ';
         }
         ?>
+
     </form>
 </body>
 

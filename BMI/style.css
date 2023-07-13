@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 120px;
+    padding: 100px;
 }
 
 h1 {
@@ -16,7 +16,7 @@ form {
     margin: 20px auto;
     background-color: #eceada;
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,13 +39,16 @@ button[type="submit"] {
     padding: 10px;
     background-color: #070707;
     color: #fff;
-    font-family: Arial, sans-serif; border: none;
+    font-family: Arial, sans-serif;
+    border: none;
     font-size: larger;
-    border-radius: 3px;
+    border-radius: 30px;
     cursor: pointer;
     margin: 10px;
 }
+
 p {
+    text-align: center;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: larger;
 }

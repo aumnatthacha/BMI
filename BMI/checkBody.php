@@ -2,7 +2,7 @@
 require_once 'BMI1.php';
 
 // ฟังก์ชั่นสำหรับตรวจสอบค่าร่างกาย
-function checkBodyStatus($bmi)
+ function checkBodyStatus($bmi)
 {
     if ($bmi < 18.5) {
         return "ผอม";
@@ -30,4 +30,3 @@ if (
     // $isNormalWeight = $calculator->isNormalWeight();
     $bodyStatus = checkBodyStatus($bmi);
 }
-?>
